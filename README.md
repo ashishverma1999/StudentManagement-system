@@ -42,6 +42,7 @@ A robust and responsive **Student Management System** built with Laravel, MySQL,
 | Spatie Laravel Permission | Role & permission management |
 | Laravel Breeze | Auth scaffolding |
 
+![Screenshot 2025-06-18 132907](https://github.com/user-attachments/assets/c3757a0d-cf98-4d75-b213-190b20333c12)
 ---
 
 ## 🚀 Installation
@@ -51,3 +52,37 @@ A robust and responsive **Student Management System** built with Laravel, MySQL,
 ```bash
 git clone https://github.com/your-username/student-management-system.git
 cd student-management-system
+```
+2. Install dependencies
+composer install
+npm install && npm run dev
+
+3.setup environment
+cp .env.example .env
+php artisan key:generate
+
+4. Configure .env with your database credentials
+
+5. Run migrations and seeders
+   php artisan migrate --seed
+
+6.start the server
+php artisan serve
+
+
+🔑 Default Roles & Permissions
+After seeding, the following roles are created:
+
+Admin: Full access
+
+Teacher: Only view students
+
+Staff: Can view, add, and edit students
+
+You can assign roles using:
+
+php artisan tinker
+
+$user = \App\Models\User::find(1);
+$user->assignRole('Admin');
+
