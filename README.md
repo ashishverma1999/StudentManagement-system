@@ -34,7 +34,7 @@ A robust and responsive **Student Management System** built with Laravel, MySQL,
 
 | Technology | Usage |
 |------------|--------|
-| Laravel 10 | Backend framework |
+| Laravel 12 | Backend framework |
 | MySQL      | Database |
 | Bootstrap 5 | Frontend styling |
 | jQuery + AJAX | Client-side interactivity |
