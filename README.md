@@ -54,21 +54,27 @@ git clone https://github.com/your-username/student-management-system.git
 cd student-management-system
 ```
 2. Install dependencies
+```bash
 composer install
 npm install && npm run dev
-
+```
 3.setup environment
+```bash
 cp .env.example .env
 php artisan key:generate
+```
 
 4. Configure .env with your database credentials
 
 5. Run migrations and seeders
+```bash
    php artisan migrate --seed
+```
 
 6.start the server
+```bash
 php artisan serve
-
+```
 
 🔑 Default Roles & Permissions
 After seeding, the following roles are created:
@@ -80,9 +86,11 @@ Teacher: Only view students
 Staff: Can view, add, and edit students
 
 You can assign roles using:
+```bash
 
 php artisan tinker
 
 $user = \App\Models\User::find(1);
 $user->assignRole('Admin');
 
+```
